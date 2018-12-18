@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import app.bosse.navcontroller.demo.R
+import app.bosse.navcontroller.demo.main.data.ParcelableData
 import kotlinx.android.synthetic.main.fragment_first.*
 
 class FirstFragment : Fragment() {
@@ -23,7 +25,16 @@ class FirstFragment : Fragment() {
         diveIntoButton.setOnClickListener {
             findNavController().navigate(
                 FirstFragmentDirections
-                    .goToSecond(safeArgs.drawableId)
+                    .goToSecond(
+                        safeArgs.drawableId,
+                        arrayOf(
+                            ParcelableData("Hello my friend!"),
+                            ParcelableData("I have some data.")
+                        )
+                    ),
+                FragmentNavigatorExtras(
+                    imageView to getString(R.string.imageTransition)
+                )
             )
         }
     }

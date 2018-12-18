@@ -70,21 +70,8 @@
     <fragment
         android:id="@+id/dest_second"
         android:name="app.bosse.navcontroller.demo.main.fragments.SecondFragment"
-        android:label="Second"
+        android:label="@string/title_second"
         tools:layout="@layout/fragment_second">
-        <action
-            android:id="@+id/go_to_third"
-            app:destination="@+id/dest_third" />
-        <argument
-            android:name="drawableId"
-            app:argType="reference" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/dest_third"
-        android:name="app.bosse.navcontroller.demo.main.fragments.ThirdFragment"
-        android:label="Third"
-        tools:layout="@layout/fragment_third">
         <argument
             android:name="drawableId"
             app:argType="reference" />
