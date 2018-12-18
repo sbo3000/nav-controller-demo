@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dest_home">
+
+    <!-- fragment ids here and item ids of menu_bottom.xml must have the same ids to ensure proper bottom menu_bottom -->
+    <fragment
+        android:id="@+id/dest_home"
+        android:name="app.bosse.navcontroller.demo.main.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/go_to_first"
+            app:destination="@+id/dest_first"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dest_dashboard"
+        android:name="app.bosse.navcontroller.demo.main.fragments.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/go_to_first"
+            app:destination="@id/dest_first" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dest_notifications"
+        android:name="app.bosse.navcontroller.demo.main.fragments.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications">
+
+        <argument
+            android:name="text"
+            android:defaultValue="not set"
+            app:argType="string" />
+        <!-- deeplinks need to be hardcoded here :-( -->
+        <deepLink app:uri="www.bosse.app/string/{data}" />
+    </fragment>
+
+    <activity
+        android:id="@id/dest_camera"
+        android:name="app.bosse.navcontroller.demo.camera.CameraActivity"
+        android:label="@string/title_camera" />
+
+    <fragment
+        android:id="@+id/dest_first"
+        android:name="app.bosse.navcontroller.demo.main.fragments.FirstFragment"
+        android:label="@string/title_first"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/go_to_second"
+            app:destination="@+id/dest_second"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <argument
+            android:name="drawableId"
+            app:argType="reference" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dest_second"
+        android:name="app.bosse.navcontroller.demo.main.fragments.SecondFragment"
+        android:label="Second"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/go_to_third"
+            app:destination="@+id/dest_third" />
+        <argument
+            android:name="drawableId"
+            app:argType="reference" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dest_third"
+        android:name="app.bosse.navcontroller.demo.main.fragments.ThirdFragment"
+        android:label="Third"
+        tools:layout="@layout/fragment_third">
+        <argument
+            android:name="drawableId"
+            app:argType="reference" />
+        <argument
+            android:name="data"
+            app:argType="app.bosse.navcontroller.demo.main.data.ParcelableData[]" />
+    </fragment>
+</navigation>

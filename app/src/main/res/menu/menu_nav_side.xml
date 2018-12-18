@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- item ids here and item ids of nav graph xml must have the same ids to ensure proper bottom menu_bottom -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@id/dest_camera"
+            android:icon="@drawable/ic_camera_black_24dp"
+            android:title="@string/title_camera" />
+        <item
+            android:id="@id/dest_gallery"
+            android:icon="@drawable/ic_gallery_black_24dp"
+            android:title="@string/title_gallery" />
+        <item
+            android:id="@id/dest_slideshow"
+            android:icon="@drawable/ic_slideshow_black_24dp"
+            android:title="@string/title_slideshow" />
+    </group>
+</menu>
