@@ -18,10 +18,10 @@ You can use the following adb command to test deep links:
     
 ### http://<i></i>w<i></i>ww.bosse.app/navcontroller/string/{data}
 - replace {DATA} with your string
-- adb shell am start -a android.intent.action.VIEW -d "http://www.bosse.app/navcontroller/string/{DATA}"
+- adb shell am start -a android.intent.action.VIEW -d "http://<i></i>w<i></i>ww.bosse.app/navcontroller/string/{DATA}"
 
 
 ### http://<i></i>w<i></i>ww.bosse.app/navcontroller/camera/
 - open the in app "camera"
-- adb shell am start -a android.intent.action.VIEW -d "http://www.bosse.app/navcontroller/camera/"
+- adb shell am start -a android.intent.action.VIEW -d "http://<i></i>w<i></i>ww.bosse.app/navcontroller/camera/"
 
