@@ -18,7 +18,13 @@
             <!--  needed for deeplinking -->
             <nav-graph android:value="@navigation/nav_main" />
         </activity>
-        <activity android:name=".camera.CameraActivity" />
+        <activity android:name=".camera.CameraActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+            <!--  needed for deeplinking -->
+            <nav-graph android:value="@navigation/nav_camera" />
+        </activity>
     </application>
 
 </manifest>
