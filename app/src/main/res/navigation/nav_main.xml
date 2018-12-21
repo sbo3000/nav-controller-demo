@@ -36,13 +36,12 @@
         android:name="app.bosse.navcontroller.demo.main.fragments.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications">
-
         <argument
-            android:name="text"
+            android:name="data"
             android:defaultValue="not set"
             app:argType="string" />
         <!-- deeplinks need to be hardcoded here :-( -->
-        <deepLink app:uri="www.bosse.app/string/{data}" />
+        <deepLink app:uri="www.bosse.app/navcontroller/string/{data}" />
     </fragment>
 
     <activity

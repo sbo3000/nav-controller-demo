@@ -17,7 +17,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        diveIntoButton.setOnClickListener {
+        nextFragmentButton.setOnClickListener {
             findNavController().navigate(
                 HomeFragmentDirections
                     .goToFirst(R.drawable.ic_home_black_24dp)

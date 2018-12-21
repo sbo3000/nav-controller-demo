@@ -17,7 +17,7 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        diveIntoButton.setOnClickListener {
+        nextFragmentButton.setOnClickListener {
             findNavController().navigate(
                 DashboardFragmentDirections
                     .goToFirst(R.drawable.ic_dashboard_black_24dp)
