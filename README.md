@@ -11,12 +11,12 @@ Use the following in the command line:
     adb shell am start -a android.intent.action.VIEW -d "{URL_PLACEHOLDER}" 
     '''
     
-### http&#58;//www.bosse.app/navcontroller/string/{data}
+### http://<i></i>w<i></i>ww.bosse.app/navcontroller/string/{data}
 - replace {DATA} with your string
 - adb shell am start -a android.intent.action.VIEW -d "http://www.bosse.app/navcontroller/string/{DATA}"
 
 
-### http://www.bosse.app/navcontroller/camera/
+### http://<i></i>w<i></i>ww.bosse.app/navcontroller/camera/
 - open the in app "camera"
 - adb shell am start -a android.intent.action.VIEW -d "http://www.bosse.app/navcontroller/camera/"
 
