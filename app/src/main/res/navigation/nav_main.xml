@@ -27,8 +27,12 @@
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard">
         <action
-            android:id="@+id/go_to_first"
-            app:destination="@id/dest_first" />
+            android:id="@+id/go_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
 
     <fragment
@@ -78,4 +82,11 @@
             android:name="data"
             app:argType="app.bosse.navcontroller.demo.main.data.ParcelableData[]" />
     </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="app.bosse.navcontroller.demo.login.AuthFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_auth" />
+
 </navigation>
